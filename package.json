@@ -1,0 +1,55 @@
+{
+	"private": true,
+	"name": "nextwind",
+	"description": "Bootstrap Next.js with WindiCSS & more",
+	"version": "0.1.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nurodev/nextwind.git"
+	},
+	"homepage": "https://github.com/nurodev/nextwind",
+	"bugs": "https://github.com/nurodev/nextwind/issues",
+	"author": {
+		"name": "nurodev",
+		"email": "me@nuro.dev",
+		"url": "https://nuro.dev"
+	},
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"format": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\""
+	},
+	"prettier": {
+		"arrowParens": "always",
+		"bracketSpacing": true,
+		"jsxBracketSameLine": true,
+		"printWidth": 100,
+		"semi": true,
+		"singleQuote": true,
+		"tabWidth": 4,
+		"trailingComma": "all",
+		"useTabs": true
+	},
+	"dependencies": {
+		"@iconify/react": "^3.2.2",
+		"next": "^12.2.0",
+		"next-seo": "^5.4.0",
+		"next-themes": "^0.2.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-use": "^17.4.0"
+	},
+	"devDependencies": {
+		"@types/node": "^18.0.0",
+		"@types/react": "^18.0.14",
+		"@types/react-dom": "^18.0.5",
+		"eslint": "7",
+		"eslint-config-next": "12.0.4",
+		"prettier": "^2.7.1",
+		"typescript": "^4.7.4",
+		"windicss": "^3.5.6",
+		"windicss-webpack-plugin": "^1.7.3"
+	}
+}
