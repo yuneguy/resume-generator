@@ -1,5 +1,7 @@
-import colors from 'windicss/colors';
+import defaultTheme from 'windicss/defaultTheme';
 import { defineConfig } from 'windicss/helpers';
+
+import { colors } from './src/lib/colors';
 
 export default defineConfig({
 	darkMode: 'class',
@@ -14,10 +16,30 @@ export default defineConfig({
 	},
 	theme: {
 		extend: {
-			colors: {
-				gray: colors.neutral,
-				primary: colors.blue,
+			backgroundOpacity: {
+				15: '0.15',
+			},
+			colors,
+			fontFamily: {
+				sans: ['Inter', ...defaultTheme.fontFamily.sans],
+			},
+			saturate: {
+				DEFAULT: {
+					200: 'saturate(2)',
+				},
+			},
+			transformOrigin: {
+				70: '70% 70%',
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						img: {
+							maxWidth: '100%',
+						},
+					},
+				},
 			},
 		},
-	},
+  },
 });

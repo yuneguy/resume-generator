@@ -1,6 +1,8 @@
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 
+import { Navbar } from '~/components';
+
 import type { WithChildren, WithProps } from '~/types';
 
 type SeoProps = WithProps<typeof NextSeo>;
@@ -21,7 +23,7 @@ export function BasicLayout({ children, ...rest }: BasicLayoutProps) {
 		openGraph: {
 			title,
 			description,
-			site_name: 'nuro',
+			site_name: 'yune',
 			url: `${origin}/${router.asPath}`,
 			type: 'website',
 			images: [
@@ -33,16 +35,12 @@ export function BasicLayout({ children, ...rest }: BasicLayoutProps) {
 				},
 			],
 		},
-		twitter: {
-			cardType: 'summary_large_image',
-			handle: '@nurodev',
-			site: '@nurodev',
-		},
 	};
 
 	return (
 		<>
 			<NextSeo {...Object.assign(defaultSeo, rest)} />
+      <Navbar.Standard />
 			{children}
 		</>
 	);
